@@ -1,7 +1,8 @@
 Modificações:
 APACHE HTTP SERVER
 +%{_libdir}/httpd/modules/mod_proxy_hcheck.so
-Adicionou uma verificação do proxy.
+
++Adicionou uma verificação do proxy.
 
 NGINX
 if [ $HTTP_MIRROR = YES ]; then
@@ -17,4 +18,17 @@ if [ $HTTP_MIRROR = YES ]; then
  Consertou um bug na verificação do requerimento PCRE
  
  WORDPRESS
+
+			 * @param array  $actions     An array of plugin action links. By default this can include 'activate',
+ +			 *                            'deactivate', and 'delete'.
+  * @param array  $plugin_data An array of plugin data. See `get_plugin_data()`.
+ +			 * @param string $context     The plugin context. By default this can include 'all', 'active', 'inactive',
+ +			 *                            'recently_activated', 'upgrade', 'mustuse', 'dropins', and 'search'.
+  * The dynamic portion of the hook name, `$plugin_file`, refers to the path
+   * @param array  $actions     An array of plugin action links. By default this can include 'activate',
+ +			 *                            'deactivate', and 'delete'.
+  * @param array  $plugin_data An array of plugin data. See `get_plugin_data()`.
+ +			 * @param string $context     The plugin context. By default this can include 'all', 'active', 'inactive',
+ +			 *                            'recently_activated', 'upgrade', 'mustuse', 'dropins', and 'search'.
  
+ + Plugin: Corrige e melhora 'docblocks' para varias ações do plugin.
